@@ -1,6 +1,5 @@
 package ical
 
-import html.HtmlLoader
 import org.apache.commons.lang3.RandomUtils
 import org.jetbrains.annotations.NotNull
 
@@ -38,19 +37,17 @@ class ICalGen {
             def end = endhr+endmin
 
             def str =
-"""
-BEGIN:VEVENT
+"""BEGIN:VEVENT
 DTSTART;TZID=Europe/London:20170925T${beg}00
 DTEND;TZID=Europe/London:20170925T${end}00
-RRULE:FREQ=WEEKLY;COUNT=1;BYDAY=${entry[2].substring(0,2).toUpperCase()}
+RRULE:FREQ=WEEKLY;COUNT=2;BYDAY=${entry[2].substring(0,2).toUpperCase()}
 DTSTAMP:20170925T164430Z
 UID:${RandomUtils.nextInt()}
 CREATED:20170925T163941Z
 LOCATION:${entry[5]}
 SUMMARY:${entry[0].substring(0,6)}
-END:VEVENT
-"""
-            println str
+END:VEVENT"""
+            print str
         }
 
     }

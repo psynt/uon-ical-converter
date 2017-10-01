@@ -47,7 +47,7 @@ CREATED:20170925T163941Z
 LOCATION:${entry[5]}
 SUMMARY:${entry[0].substring(0,6)}
 END:VEVENT"""
-            print str
+            println str
         }
 
     }

@@ -13,6 +13,7 @@ class ICalGen {
     }
 
     def generateEvents(){
+        def kyou = new Date().format( 'yyyyMMdd' )
 //        prodid('-//Ben Fortuna//iCal4j 1.0//EN')
 //        version('2.0')
         inp.each{ List<String> entry ->
@@ -38,12 +39,12 @@ class ICalGen {
 
             def str =
 """BEGIN:VEVENT
-DTSTART;TZID=Europe/London:20170925T${beg}00
-DTEND;TZID=Europe/London:20170925T${end}00
+DTSTART;TZID=Europe/London:${kyou}T${beg}00
+DTEND;TZID=Europe/London:${kyou}T${end}00
 RRULE:FREQ=WEEKLY;COUNT=2;BYDAY=${entry[2].substring(0,2).toUpperCase()}
-DTSTAMP:20170925T164430Z
+DTSTAMP:${kyou}5T164430Z
 UID:${RandomUtils.nextInt()}
-CREATED:20170925T163941Z
+CREATED:${kyou}5T163941Z
 LOCATION:${entry[5]}
 SUMMARY:${entry[0].substring(0,6)}
 END:VEVENT"""
@@ -53,3 +54,7 @@ END:VEVENT"""
     }
 
 }
+
+
+
+

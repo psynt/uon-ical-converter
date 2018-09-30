@@ -46,7 +46,7 @@ DTSTAMP:${kyou}5T164430Z
 UID:${RandomUtils.nextInt()}
 CREATED:${kyou}5T163941Z
 LOCATION:${entry[5]}
-SUMMARY:${entry[0].substring(0,6)}
+SUMMARY:${entry[0]}
 END:VEVENT\n"""
             println str
         }

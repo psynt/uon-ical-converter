@@ -41,13 +41,13 @@ class ICalGen {
 """BEGIN:VEVENT
 DTSTART;TZID=Europe/London:${kyou}T${beg}00
 DTEND;TZID=Europe/London:${kyou}T${end}00
-RRULE:FREQ=WEEKLY;COUNT=2;BYDAY=${entry[2].substring(0,2).toUpperCase()}
+RRULE:FREQ=WEEKLY;COUNT=12;BYDAY=${entry[2].substring(0,2).toUpperCase()}
 DTSTAMP:${kyou}5T164430Z
 UID:${RandomUtils.nextInt()}
 CREATED:${kyou}5T163941Z
 LOCATION:${entry[5]}
 SUMMARY:${entry[0].substring(0,6)}
-END:VEVENT"""
+END:VEVENT\n"""
             println str
         }
 

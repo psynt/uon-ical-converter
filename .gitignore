@@ -5,3 +5,4 @@ out/
 *.jar
 !gradle/wrapper/gradle-wrapper.jar
 *.html
+*.iml

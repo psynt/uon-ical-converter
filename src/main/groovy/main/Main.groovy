@@ -7,7 +7,7 @@ try {
     def ht = new HtmlLoader(args[0])
     ht.getData()
     def fil = ht.filterData()
-    def ic = new ICalGen(fil)
+    def ic = new ICalGen(fil as List<List<String>>)
     print """BEGIN:VCALENDAR
 PRODID:-//Google Inc//Google Calendar 70.9054//EN
 VERSION:2.0

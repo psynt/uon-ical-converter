@@ -8,3 +8,7 @@ To use:
 
 * You can adjust the starting date and the number of repeats in the ICalGen file
 
+## What I used
+
+* Groovy lang
+* Web scraping
